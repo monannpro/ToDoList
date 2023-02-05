@@ -1,6 +1,6 @@
-import {form, list, task, deadline} from "./front-dom.js";
+import {form, task, deadline} from "./front-dom.js";
 import {statistics} from "./front-statistics.js";
-import {saveTaskListToLS, showList} from "./front-list.js";
+import {loadTaskListFromLS, saveTaskListToLS, showList} from "./front-list.js";
 
 form.addEventListener('submit', async event => {
     event.preventDefault();
@@ -19,11 +19,7 @@ form.addEventListener('submit', async event => {
         },
     });
 
-    fetch('/todo/list').then((res) => {
-        return res.json();
-    }).then((data) => {
-        saveTaskListToLS(data);
-        showList(data);
-        statistics(data);
-    }).catch(e => alert("Wystąpił błąd. Spróbuj ponownie później."));
+    await saveTaskListToLS();
+    showList(loadTaskListFromLS());
+    statistics(loadTaskListFromLS());
 });
