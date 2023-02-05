@@ -58,6 +58,9 @@ const showListRow = (task) => {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = task.completed;
+    if(checkbox.checked){
+        listLi.classList.add("done");
+    }
     checkbox.addEventListener('change', async () => {
         await saveTask(task.content, task.deadline, task.id, checkbox.checked);
     });
@@ -118,7 +121,7 @@ const showListRow = (task) => {
             const editedTaskDeadline = editDeadline.valueAsDate;
             const editedTaskId = task.id;
             const editedTaskCompleted = checkbox.checked;
-           await saveTask(editedTask, editedTaskDeadline, editedTaskId, editedTaskCompleted);
+            await saveTask(editedTask, editedTaskDeadline, editedTaskId, editedTaskCompleted);
         });
         listLi.appendChild(editForm);
         editForm.appendChild(editInput);
@@ -132,6 +135,9 @@ const showListRow = (task) => {
 
     const deadline = document.createElement("span");
     deadline.classList.add("task-deadline");
+    if(checkbox.checked){
+        deadline.classList.add("hidden");
+    }
     const now = new Date();
     const deadlineInfo = daysToDeadline(now, task.deadline);
     if (deadlineInfo === 0) {
@@ -165,7 +171,7 @@ export const showList = (array) => {
         info.innerText = "Brak zadań do wyświetlenia.";
         list.appendChild(info);
     } else {
-       tasks.forEach(showListRow);
+        tasks.forEach(showListRow);
     }
 };
 

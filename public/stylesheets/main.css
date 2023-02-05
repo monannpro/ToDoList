@@ -59,6 +59,10 @@ main li#expired{
     color: #ff5b0a;
 }
 
+main li#expired.done{
+    color: dimgrey;
+}
+
 .task-content {
     font-size: 20px;
     text-align: left;
@@ -106,3 +110,6 @@ main li#expired{
     font-size: 15px;
 }
 
+.task-deadline.hidden{
+    display:none;
+}
