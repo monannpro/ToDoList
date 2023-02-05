@@ -1,0 +1,108 @@
+main {
+    font-family: 'Calibri', sans-serif;
+    overflow: hidden;
+    color: #06113C;
+}
+
+.to-do-list {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-left:20px;
+}
+
+ol.tasks {
+    overflow: auto;
+    box-sizing: border-box; /*marginesy wewn. wliczone w szerokość */
+    flex-grow: 1; /* będzie wypełniał udostępnioną przestrzeń*/
+}
+
+main li {
+    padding: 10px 0;
+    display: flex;
+    max-width: 800px;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+main li:nth-child(odd){
+    background-color: #EEEEEE;
+}
+
+main li:nth-child(even){
+    background-color: #DDDDDD;
+}
+
+main li.active{
+    font-weight: bold;
+}
+
+main li.hover{
+    cursor: pointer;
+}
+
+main li:not(.active) .btn-del{
+    display: none;
+}
+
+main li:not(.active) .btn-edit{
+    display: none;
+}
+
+main li.hidden{
+    display:none;
+}
+
+main li#expired{
+    color: #ff5b0a;
+}
+
+.task-content {
+    font-size: 20px;
+    text-align: left;
+    width: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    flex-grow: 1;
+}
+
+
+.btn-del {
+    left:0;
+    border: none;
+    background: none;
+    color: #FF8C32;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-edit {
+    left:0;
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #06113C;
+}
+
+.done{
+    text-decoration: line-through;
+    color: dimgrey;
+}
+
+.deadline-icon {
+    border: none;
+    background: none;
+    color: #FF8C32;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.task-deadline{
+    color: grey;
+    font-size: 15px;
+}
+

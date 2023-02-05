@@ -1,0 +1,12 @@
+footer {
+    border-top-style: double;
+    border-color: #DDDDDD;
+    text-align: center;
+}
+
+footer p{
+    color: #06113C;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Lucida Handwriting';
+}

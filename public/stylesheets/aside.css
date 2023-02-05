@@ -1,0 +1,63 @@
+aside {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* STATYSTYKI */
+
+.statistics-div{
+    display: inline-block;
+    font-size: 30px;
+    color: #06113C;
+    font-family: 'Calibri', sans-serif;
+    background: #EEEEEE;
+    border-radius: 10%;
+    opacity:0.7;
+    margin: 30px;
+    padding: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* DIAGRAM */
+
+.graph{
+
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(#06113C 0deg 90deg, #FF8C32 30deg);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+.container{
+    display:flex;
+}
+
+.graph-done, .graph-to-do{
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+}
+
+.graph-done{
+    background: #06113C;
+}
+
+.graph-to-do{
+    background: #FF8C32;
+}
+
+aside li{
+    list-style: none;
+}
+
+.graph-place {
+    display: block;
+    margin: 50px;
+
+}

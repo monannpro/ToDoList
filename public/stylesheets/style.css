@@ -1,0 +1,38 @@
+body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 230px auto 50px;
+    grid-template-areas:
+            "header header"
+            "main sidebar"
+            "footer footer";
+    justify-items: stretch;
+    align-content: stretch;
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/photography.png')
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #FF8C32;
+}
+
+.add-new-task-form {
+    padding: 20px;
+}

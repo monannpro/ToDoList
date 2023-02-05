@@ -1,0 +1,61 @@
+header {
+    color: #06113C;
+}
+
+.categories button {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    border-color: #06113C;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    margin:10px;
+    background-color: #06113C;
+    color: white;
+    transition-duration: 0.6s;
+}
+
+.categories button:hover {
+    background-color: #FFB043;
+    color: #06113C;
+}
+
+.categories button.active {
+    background-color: #FF8C32;
+    color: #06113C;
+}
+
+.add-new-task-form input {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 4px;
+
+}
+
+.add-new-task-form button {
+    padding: 5px;
+    font-size: 20px;
+    border-color: #06113C;
+    border-radius: 4px;
+    background-color:#06113C;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.6s;
+}
+
+.add-new-task-form button:hover {
+    background-color: #FFB043;
+    color: #06113C;
+}
+
+#to-do-category:not(.active) #expired-div{
+    display: none;
+}
+
+#expired-div {
+    display: inline-block;
+}
+
+#expired-div.hidden, .hidden{
+    display: none;
+}
+
