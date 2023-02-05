@@ -18,7 +18,7 @@ export const saveTaskListToLS = () => {
         localStorage.setItem(taskListKey, JSON.stringify(data));
 
         return data;
-    }).catch(e => alert("Wystąpił błąd. Spróbuj ponownie później."));
+    }).catch(() => alert("Wystąpił błąd. Spróbuj ponownie później."));
 };
 
 await saveTaskListToLS();
@@ -28,7 +28,7 @@ toDoList.appendChild(list);
 
 const saveTask = async (editedTask, editedTaskDeadline, editedTaskId, editedTaskCompleted) => {
 
-    const res = await fetch('/todo/edit', {
+    await fetch('/todo/edit', {
         method: 'POST',
         body: JSON.stringify({
             editedTask,
@@ -79,7 +79,7 @@ const showListRow = (task) => {
 
 
 
-            const res = await fetch('/todo/delete', {
+            await fetch('/todo/delete', {
                 method: 'POST',
                 body: JSON.stringify({
                     deletedTaskId,
@@ -150,7 +150,7 @@ const showListRow = (task) => {
     const deadline = document.createElement("span");
     deadline.classList.add("task-deadline");
     const now = new Date();
-    const deadlineInfo = -parseInt((now - task.deadline) / 1000 / 60 / 60 / 24);
+    const deadlineInfo = -parseInt(`${(now - task.deadline) / 1000 / 60 / 60 / 24}`);
     if (deadlineInfo === 0) {
         deadline.innerText = "do jutra!";
     } else {

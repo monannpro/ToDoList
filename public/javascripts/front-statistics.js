@@ -13,7 +13,7 @@ const thirdStatisticsContent = document.createElement("p");
 thirdStatisticsContent.classList.add("third-stat");
 
 export const daysToDeadline = (now, deadline) => {
-    return -parseInt((now - deadline)/1000/60/60/24);
+    return -parseInt(`${(now - deadline)/1000/60/60/24}`);
 };
 
 export const statistics = (array) => {
@@ -74,4 +74,4 @@ statisticsDiv.appendChild(thirdStatisticsContent);
 
 fetch('/todo/list').then((res) => {
     return res.json();
-}).then((data) => statistics(data)).catch(e => alert("Wystąpił błąd. Spróbuj ponownie później."));
+}).then((data) => statistics(data)).catch(() => alert("Wystąpił błąd. Spróbuj ponownie później."));

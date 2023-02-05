@@ -8,7 +8,7 @@ form.addEventListener('submit', async event => {
     const newTask = task.value;
     const newTaskDeadline = deadline.valueAsDate;
 
-    const res = await fetch('/todo/add', {
+    await fetch('/todo/add', {
         method: 'POST',
         body: JSON.stringify({
             newTask,
