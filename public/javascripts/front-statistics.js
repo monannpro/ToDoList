@@ -28,7 +28,7 @@ export const statistics = (array) => {
     const countingExpired = (task) => {
         const now = new Date();
         const deadlineInfo = daysToDeadline(now, task.deadline);
-        if (deadlineInfo < 0 && task.completed === false){
+        if (deadlineInfo < 0 && !task.completed){
             expiredTasks++;
         }
         thirdStatisticsContent.innerText = `Przeterminowane: ${expiredTasks}`;
@@ -42,7 +42,7 @@ export const statistics = (array) => {
     };
 
     const countingTodo = (task) => {
-            if(task.completed === false) {
+            if(!task.completed) {
                 todoTasks++;
             }
         secondStatisticsContent.innerText = `Pozostało do zrobienia: ${todoTasks}`;

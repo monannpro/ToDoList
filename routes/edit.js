@@ -16,8 +16,6 @@ editRouter
                     task.content = editedTask;
                     task.deadline = +(new Date(editedTaskDeadline));
                     task.completed = editedTaskCompleted;
-                } else {
-                    console.log("not found");
                 }
             };
 
