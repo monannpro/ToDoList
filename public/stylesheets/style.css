@@ -11,7 +11,10 @@ body {
     background-color: black;
     margin: 0;
     height: 100vh;
+    min-heigh: 1430px;
     width: 100vw;
+    min-width: 1630px;
+    overflow: auto;
     box-sizing: border-box;
     background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/photography.png')
 }

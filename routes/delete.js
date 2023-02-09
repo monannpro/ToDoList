@@ -5,21 +5,16 @@ const deleteRouter = express.Router();
 
 deleteRouter
 
-    .post('/delete', async (req, res) => {
+    .post('/delete', async (req, res, next) => {
         try {
             const {deletedTaskId} = req.body;
             const data = await readFile('./data/list.json', 'utf8');
             const list = JSON.parse(data)
 
-            const searchDeletedTask = (task) => {
-                if(task.id === deletedTaskId) {
-                    return false;
-                } else {
-                    return true;
-                }
-            };
+            const searchDeletedTask = (task) => task.id !== deletedTaskId;
 
             list.forEach(searchDeletedTask);
+
             const currentList = list.filter(searchDeletedTask);
             console.log(currentList);
 
@@ -27,14 +22,9 @@ deleteRouter
 
             res.end();
         } catch(err) {
-            console.error(`Coś poszło nie tak.. Spróbuj ponownie później. ${err}`);
+            next(err);
         }
     });
-
-
-
-
-
 
 module.exports = {
     deleteRouter,

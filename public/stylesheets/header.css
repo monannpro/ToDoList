@@ -28,7 +28,6 @@ header {
     font-size: 20px;
     padding: 5px;
     border-radius: 4px;
-
 }
 
 .add-new-task-form button {
@@ -45,10 +44,6 @@ header {
 .add-new-task-form button:hover {
     background-color: #FFB043;
     color: #06113C;
-}
-
-#to-do-category:not(.active) #expired-div{
-    display: none;
 }
 
 #expired-div {

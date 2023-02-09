@@ -1,12 +1,12 @@
 {
-  "name": "todolist",
+  "name": "monpro todo list",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Monika Prokorym",
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^10.1.0",

@@ -11,7 +11,7 @@ export const loadTaskListFromLS = () => {
 };
 
 
-export const saveTaskListToLS = () => {
+export const fetchTaskListAndSaveToLS = () => {
     return fetch('/todo/list').then((res) => {
         return res.json();
     }).then((data) => {
@@ -20,7 +20,7 @@ export const saveTaskListToLS = () => {
     }).catch(() => alert("Wystąpił błąd. Spróbuj ponownie później."));
 };
 
-await saveTaskListToLS();
+await fetchTaskListAndSaveToLS();
 
 
 main.appendChild(toDoList);
@@ -40,7 +40,7 @@ const saveTask = async (editedTask, editedTaskDeadline, editedTaskId, editedTask
             'Content-Type': 'application/json',
         },
     });
-    await saveTaskListToLS();
+    await fetchTaskListAndSaveToLS();
     showList(loadTaskListFromLS());
     statistics(loadTaskListFromLS());
 };
@@ -86,10 +86,10 @@ const showListRow = (task) => {
                     'Content-Type': 'application/json',
                 },
             });
-            await saveTaskListToLS();
+            await fetchTaskListAndSaveToLS();
             showList(loadTaskListFromLS());
+            statistics(loadTaskListFromLS());
         }
-        statistics(loadTaskListFromLS());
     });
 
     const btnEdit = document.createElement("button");
@@ -103,9 +103,8 @@ const showListRow = (task) => {
         const editForm = document.createElement("form");
         editForm.classList.add("edit-form");
         const editInput = document.createElement("input");
-        editInput.classList.add("edit-input");
+        editInput.classList.add("edit-input-content");
         editInput.type = "text";
-        editInput.size = 40;
         editInput.id = task.id;
         editInput.placeholder = task.content;
         const editDeadline = document.createElement("input");
@@ -130,6 +129,7 @@ const showListRow = (task) => {
     });
 
     const deadlineIcon = document.createElement("button");
+    deadlineIcon.title = new Date(task.deadline).toLocaleDateString();
     deadlineIcon.classList.add("deadline-icon");
     deadlineIcon.innerHTML = '<i class="fa-regular fa-clock"></i>';
 

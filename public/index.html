@@ -1,10 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Monika Prokorym">
+    <meta name="creator" content="Monika Prokorym">
     <title>To do list</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/main.css">
@@ -15,7 +17,7 @@
 </head>
 <body>
 <header>
-    <form action="">
+    <form>
         <div class="add-new-task-form">
             <input
                     size="50"
@@ -33,9 +35,9 @@
         </div>
     </form>
     <section class="categories">
-        <button class="headerBtns" id="to-do-category">Do zrobienia</button>
-        <button class="headerBtns"id="done-category">Zrobione</button>
-        <button class="headerBtns" id="all-categories">Wszystkie</button>
+        <button id="to-do-category">Do zrobienia</button>
+        <button id="done-category">Zrobione</button>
+        <button id="all-categories">Wszystkie</button>
         <div id="expired-div" class="hidden"><input type="checkbox" id="expired-checkbox">tylko przeterminowane</div>
     </section>
 
@@ -55,21 +57,20 @@
             </div>
             <div>
                 <ul>
-                    <li><span class="graph-done"></span> zakończone</li>
-                    <li><span class="graph-to-do"></span> do zrobienia</li>
+                    <li><span class="graph-done"></span>zakończone</li>
+                    <li><span class="graph-to-do"></span>do zrobienia</li>
                 </ul>
             </div>
         </div>
 
 </aside>
 <footer>
-    <p>Konkurs: MegaK V3 - 07.02.2023 <i class="fa-regular fa-face-grin-tongue-wink"></i></p>
+    <p>Konkurs: MegaK V3 - 07.02.2023 <i class="fa-regular fa-face-grin-tongue-wink"></i> <span class="author">Autor: Monika Prokorym</span></p>
+
 </footer>
 <script src="javascripts/front-list.js" type="module"></script>
 <script src="javascripts/front-category.js" type="module"></script>
 <script src="javascripts/front-statistics.js" type="module"></script>
-<script src="javascripts/front-edit.js" type="module"></script>
-<script src="javascripts/front-delete.js" type="module"></script>
 <script src="javascripts/front-add.js" type="module"></script>
 
 

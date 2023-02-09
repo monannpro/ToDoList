@@ -66,10 +66,3 @@ expiredCheckbox.addEventListener('change', () => {
 const filterTaskList = (taskFilter) => {
     return loadTaskListFromLS().filter(taskFilter);
 };
-
-
-//1. do kazdego btn + checkbox.eventListener dodac parametr w url
-//2. addeventlistenery wywołują showList.
-//2. w showList czytam parametry z url.
-    //a. jeśli jest parametr to filtruje - filterTaskList
-    //b. jesli nie ma parametru showList (pełna lista) ;

@@ -1,6 +1,6 @@
 import {form, task, deadline} from "./front-dom.js";
 import {statistics} from "./front-statistics.js";
-import {loadTaskListFromLS, saveTaskListToLS, showList} from "./front-list.js";
+import {loadTaskListFromLS, fetchTaskListAndSaveToLS, showList} from "./front-list.js";
 
 form.addEventListener('submit', async event => {
     event.preventDefault();
@@ -19,7 +19,9 @@ form.addEventListener('submit', async event => {
         },
     });
 
-    await saveTaskListToLS();
+    await fetchTaskListAndSaveToLS();
     showList(loadTaskListFromLS());
     statistics(loadTaskListFromLS());
+    task.value = "";
+    deadline.value = "";
 });

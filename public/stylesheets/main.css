@@ -15,7 +15,7 @@ main {
 ol.tasks {
     overflow: auto;
     box-sizing: border-box; /*marginesy wewn. wliczone w szerokość */
-    flex-grow: 1; /* będzie wypełniał udostępnioną przestrzeń*/
+    flex-grow: 1; /* będzie wypełniał dostępną przestrzeń*/
 }
 
 main li {
@@ -76,7 +76,6 @@ main li#expired.done{
 
 
 .btn-del {
-    left:0;
     border: none;
     background: none;
     color: #FF8C32;
@@ -85,11 +84,14 @@ main li#expired.done{
 }
 
 .btn-edit {
-    left:0;
     border: none;
     background: none;
     font-size: 20px;
     color: #06113C;
+}
+
+.edit-input-content{
+    width: 400px;
 }
 
 .done{

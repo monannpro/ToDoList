@@ -10,3 +10,7 @@ footer p{
     letter-spacing: 2px;
     font-family: 'Lucida Handwriting';
 }
+
+.author {
+    margin-left: 100px;
+}

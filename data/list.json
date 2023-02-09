@@ -1,86 +1,58 @@
 [
   {
-    "content": "test1",
-    "deadline": 1675641600000,
-    "creationDate": 1675630353750,
-    "id": 1675630353750,
-    "completed": true
-  },
-  {
-    "content": "test2",
-    "deadline": 1675814400000,
-    "creationDate": 1675630358997,
-    "id": 1675630358997,
+    "content": "Umyć okna",
+    "deadline": 1676678400000,
+    "creationDate": 1675717778819,
+    "id": 1675717778819,
     "completed": false
   },
   {
-    "content": "test3",
-    "deadline": 1675987200000,
-    "creationDate": 1675630363630,
-    "id": 1675630363630,
+    "content": "Dokończyć projekt XYZ",
+    "deadline": 1676073600000,
+    "creationDate": 1675717794404,
+    "id": 1675717794404,
     "completed": false
   },
   {
-    "content": "test4",
-    "deadline": 1676246400000,
-    "creationDate": 1675630368335,
-    "id": 1675630368335,
-    "completed": false
-  },
-  {
-    "content": "test5",
+    "content": "Rozmrozić lodówkę ",
     "deadline": 1675209600000,
-    "creationDate": 1675630372551,
-    "id": 1675630372551,
+    "creationDate": 1675717807236,
+    "id": 1675717807236,
     "completed": false
   },
   {
-    "content": "test6",
-    "deadline": 1675296000000,
-    "creationDate": 1675630377240,
-    "id": 1675630377240,
+    "content": "Zaplanować budżet na 2023",
+    "deadline": 1672444800000,
+    "creationDate": 1675717871322,
+    "id": 1675717871322,
     "completed": true
   },
   {
-    "content": "test7",
-    "deadline": 1675555200000,
-    "creationDate": 1675630383410,
-    "id": 1675630383410,
+    "content": "Kupić prezent dla ...",
+    "deadline": 1676505600000,
+    "creationDate": 1675717894320,
+    "id": 1675717894320,
     "completed": false
   },
   {
-    "content": "test8",
-    "deadline": 1675641600000,
-    "creationDate": 1675630389725,
-    "id": 1675630389725,
+    "content": "Przedłużyć subskrypcję ABC",
+    "deadline": 1675468800000,
+    "creationDate": 1675717938373,
+    "id": 1675717938373,
     "completed": true
   },
   {
-    "content": "test9",
-    "deadline": 1678406400000,
-    "creationDate": 1675630396835,
-    "id": 1675630396835,
+    "content": "Opłacić rachunek za prąd",
+    "deadline": 1675987200000,
+    "creationDate": 1675717955902,
+    "id": 1675717955902,
     "completed": false
   },
   {
-    "content": "test10",
-    "deadline": 1677456000000,
-    "creationDate": 1675630403347,
-    "id": 1675630403347,
-    "completed": true
-  },
-  {
-    "content": "test11",
-    "deadline": 1676592000000,
-    "creationDate": 1675630407802,
-    "id": 1675630407802,
-    "completed": true
-  },
-  {
-    "content": "test12",
-    "deadline": 1676419200000,
-    "creationDate": 1675630412209,
-    "id": 1675630412209,
+    "content": "Sprzedać stary komputer",
+    "deadline": 1675382400000,
+    "creationDate": 1675717998407,
+    "id": 1675717998407,
     "completed": false
   }
 ]
